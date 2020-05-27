@@ -18,8 +18,8 @@ let currentTheme = localStorage.getItem('Theme', body.className);
 
 menuItems.insertAdjacentHTML('afterbegin', menuItemsTemplate(dataMenuList));
 
-if (currentTheme) {
-  toolbarDom.checked = false;
+if (!currentTheme) {
+  toolbarDom.checked = true;
   localStorage.setItem('Checked', toolbarDom.checked);
   body.classList.add('light-theme');
   currentTheme = localStorage.setItem('Theme', body.className);
